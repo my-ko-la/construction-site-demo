@@ -2,12 +2,12 @@
 
 const links: String[] = ["ABOUT US", "SERVICES", "PROJECTS", "CAREERS"];
 ---
-<nav class="h-10 text-white w-screen flex outline-1 px-5 border-stone-400 flex-row justify-center md:justify-between items-center bg-[#1f1f1f] mr-auto">
-    <div class="hidden md:flex">LOGO HERE</div>
-    <ul class="flex-row flex text-[10px] md:text-sm gap-3 md:gap-6 font-thin ">
+<nav class="h-10 text-white w-screen flex outline-1 px-5 border-stone-400 flex-row justify-center md:justify-between items-center bg-[#1f1f1f]">
+    <div class="hidden lg:h-10 md:flex md:flex-row md:items-center">LOGO HERE</div>
+    <ul class="flex-row flex text-[10px] md:text-sm lg:text-lg gap-3 md:gap-6 font-thin ">
         {links.map(link => (<a class="hover:underline underline-offset-4 ">{link}</a>))}
     </ul>
-    <div id="quote" class="text-[8px] ml-2 text-black h-6 flex flex-col justify-center p-1 bg-[#CC9644]">GET A QUOTE</div>
+    <div id="quote" class="text-[8px] lg:text-lg lg:p-2 max-w-5xl ml-10 text-black h-8 flex flex-col justify-center p-1 bg-[#CC9644]">GET A QUOTE</div>
 </nav>
 
 <style>
@@ -19,7 +19,7 @@ const links: String[] = ["ABOUT US", "SERVICES", "PROJECTS", "CAREERS"];
     #quote:hover {
         transition: all .5s linear;
         color: white;
-        box-shadow: inset 100px 0 0 0 #644516;
+        box-shadow: inset 200px 0 0 0 #644516;
     }
 
 </style>

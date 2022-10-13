@@ -4,18 +4,22 @@ const countries: number = 8;
 const dogs: number = 9;
 ---
 
-<div class="bg-[#1f1f1f] border-t border-[#5c5757] h-full outline-1 flex flex-col justify-center items-center">
-    <ul class="flex flex-col md:gap-6">
+<div class="bg-[#1f1f1f] border-y border-[#5c5757] h-full w-screen md:w-full outline-1 flex flex-col justify-center items-center
+">
+    <ul class="flex md:flex-col
+    gap-16 h-24 md:h-full justify-center items-center
+    md:gap-6">
         <li>
-            <p class="text-white md:text-6xl">{projects}</p>
+            <p class="text-white  text-3xl md:text-6xl">{projects}</p>
             <p>Projects</p>
         </li>
         <li>
-           <p class="text-white md:text-6xl">{countries}</p> 
-            <p>Countries worked in</p>
+           <p class="text-white  text-3xl md:text-6xl">{countries}</p> 
+
+            <p>Countries</p>
         </li>
         <li>
-            <p class="text-white md:text-6xl">{dogs}</p>
+            <p class="text-white  text-3xl md:text-6xl">{dogs}</p>
             <p>Office dogs</p>
         </li>
     </ul>
@@ -31,6 +35,7 @@ const dogs: number = 9;
        color: #696969; 
        font-size: calc(4*4px);
        font-family: 'Chakra Petch';
+       text-align: center;
     }
 
     * {
