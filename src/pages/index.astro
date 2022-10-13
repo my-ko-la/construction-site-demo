@@ -1,0 +1,19 @@
+---
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Stats from "../components/Stats.astro"
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="DENIS Construction">
+	<Navbar />
+	<div class="grid md:grid-rows-4 md:grid-cols-8">
+		<div class="col-span-6">
+			<Hero />
+		</div>
+		<div class="col-span-2">
+			<Stats />
+		</div>
+	</div>
+</Layout>

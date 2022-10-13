@@ -1,0 +1,40 @@
+---
+const projects: number = 100;
+const countries: number = 8;
+const dogs: number = 9;
+---
+
+<div class="bg-[#1f1f1f] border-t border-[#5c5757] h-full outline-1 flex flex-col justify-center items-center">
+    <ul class="flex flex-col md:gap-6">
+        <li>
+            <p class="text-white md:text-6xl">{projects}</p>
+            <p>Projects</p>
+        </li>
+        <li>
+           <p class="text-white md:text-6xl">{countries}</p> 
+            <p>Countries worked in</p>
+        </li>
+        <li>
+            <p class="text-white md:text-6xl">{dogs}</p>
+            <p>Office dogs</p>
+        </li>
+    </ul>
+</div>
+
+<style>
+
+    li {
+        color: white;
+    }
+
+    p {
+       color: #696969; 
+       font-size: calc(4*4px);
+       font-family: 'Chakra Petch';
+    }
+
+    * {
+        font-family: 'Chakra Petch', 'sans-serif';
+    }
+
+</style>

@@ -1,0 +1,25 @@
+---
+
+const links: String[] = ["ABOUT US", "SERVICES", "PROJECTS", "CAREERS"];
+---
+<nav class="h-10 text-white w-screen flex outline-1 px-5 border-stone-400 flex-row justify-center md:justify-between items-center bg-[#1f1f1f] mr-auto">
+    <div class="hidden md:flex">LOGO HERE</div>
+    <ul class="flex-row flex text-[10px] md:text-sm gap-3 md:gap-6 font-thin ">
+        {links.map(link => (<a class="hover:underline underline-offset-4 ">{link}</a>))}
+    </ul>
+    <div id="quote" class="text-[8px] ml-2 text-black h-6 flex flex-col justify-center p-1 bg-[#CC9644]">GET A QUOTE</div>
+</nav>
+
+<style>
+
+    * {
+        font-family: 'Chakra Petch', 'sans-serif';
+    }
+
+    #quote:hover {
+        transition: all .5s linear;
+        color: white;
+        box-shadow: inset 100px 0 0 0 #644516;
+    }
+
+</style>
