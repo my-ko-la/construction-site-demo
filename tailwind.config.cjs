@@ -11,5 +11,13 @@ module.exports = {
 				'chakra': ['Charka Petch', 'sans-serif'],
 			}
 	},
-	plugins: [],
+	plugins: [
+		function ({addComponents}) {
+			addComponents({
+				'.debug': {
+					border: '1px dotted red'
+				}
+			})
+		}
+	],
 }

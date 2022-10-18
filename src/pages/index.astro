@@ -3,33 +3,59 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Stats from "../components/Stats.astro"
 import Layout from "../layouts/Layout.astro";
-
+import ProjectShowcase from "../components/ProjectShowcase";
+import ServiceComponent from "../components/ServiceComponent";
+import NewsShowcase from "../components/NewsShowcase";
+const listOfServices: string[] = ["Full Project Delivery",
+"Rapid Cost Monitoring", "Construction Cost Estimating", "Advisory Services"];
 ---
 
 <Layout title="DENIS Construction">
 	<Navbar />
-	<div class="grid md:grid-rows-32 row- md:grid-cols-8">
-		<div class="col-span-6 row-span-1">
+	<div class="grid grid-cols-2 md:grid-cols-8">
+		<div class="row-start-1 row-end-3 col-span-8 md:col-span-6">
 			<Hero />
 		</div>
-		<div class="col-span-2 row-span-1">
+		<div class="md:col-span-2 row-span-2 col-span-8">
 			<Stats />
 		</div>
-		<div id="about" class="flex md:h-50 border-b items-center whitespace-pre flex-row md:pb-10 col-span-6 border-[#5c5757] md:border-r  bg-[#1f1f1f]">
+		<div id="about" class="flex md:h-50 border-b items-center whitespace-pre md:py-5 flex-row md:pb-10 col-span-8 md:col-span-6 border-[#5c5757] md:border-r  bg-[#1f1f1f]">
 			<div class="text-[#434141] md:text-3xl md:pb-12 px-8">ABOUT US</div>
-			<div class="text-[#737373] pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident nesciunt vitae 
+			<div class="text-[#737373] md:block text-xs md:text-base overflow-auto py-3 md:pt-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident nesciunt vitae 
 ipsam culpa. Delectus ipsum qui soluta magnam, veniam maxime assumenda culpa 
 sequi incidunt eveniet eius impedit sint praesentium facilis velit perspiciatis facere 
 commodi corporis possimus vel voluptas officiis ad quasi. Sapiente doloribus 
 incidunt ratione perferendis nisi eaque? Accusamus, dolorem.</div>
 		</div>
-		<a class="bg-[#1f1f1f] md:h-50 md:col-span-2 flex justify-center items-center text-white" href="">Learn more about us {'->'}</a>
+		<a class="bg-[#1f1f1f] md:h-50 border-b border-[#5c5757] col-span-8 py-4 sm:py-0  md:col-span-2 flex justify-center items-center text-white" href="">Learn more about us {'->'}</a>
+		<div id="showcase" class="">
+			<ProjectShowcase />
 		</div>
+		<div id="quote" class="col-span-8 md:row-span-1">
+			<p class="uppercase bg-[#1f1f1f] border-b border-[#5c5757] flex lg:text-3xl row-span-3 text-xs flex-row w-full h-24 md:h-48 justify-center items-center px-10 md:px-36  text-white">
+				Our Knowledge and Experience in Construction, Planning and Business allows us to Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, inventore iure. Excepturi quasi ullam quam. 
+			</p>
+		</div>
+		<div id="services" class="col-span-8 text-[#737373] flex flex-col md:flex-row items-center md:h-32 row-span-3 bg-[#1f1f1f] border-x md:border-x-0 border-b border-[#5c5757]">
+			<p class="text-3xl border-b md:border-b-0 px-5 md:border-r uppercase flex items-center justify-center w-full md:w-60 h-full border-[#5c5757]">Services</p>
+			<p class="p-6 md:px-10">DENIS Construction is uniquely equipped to manage construction projects that are complex and challenging in scope.<br> From small-scale reconstruction to greenfield infrastructure projects, we can curate the realization of the project from day 0 to completion.</p>
+		</div>
+		<div id="list" class="col-span-8">
+			{listOfServices.map(( service) => (<ServiceComponent title={service} />))}
+		</div>
+		<div id="news" class="col-span-8 relative text-[#737373] flex flex-col md:flex-row items-center md:h-32 row-span-3 bg-[#1f1f1f] border-x md:border-x-0 border-b border-[#5c5757]">
+			<p class="text-3xl border-b md:border-b-0 px-5 md:border-r uppercase flex items-center justify-center w-full md:w-60 h-full border-[#5c5757]">Our Latest News</p>
+			<div class="flex flex-col gap-4 px-8 py-2 border-x-0 md:px-10">
+				<p class="">At DENIS Construction we are passionate about our clients, our teams, and the work we do in the construction industry.</p>
+				<a href="" class="text-sm text-white">View all stories {' ->'}</a>
+			</div>
+		</div>
+</div>
 </Layout>
 
 <style>
 
-	#about {
+	#about, #showcase, #quote, #services, #news, #list {
 		font-family: 'Chakra Petch', 'sans-serif';
 	}
 
