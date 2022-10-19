@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import ProjectShowcase from "../components/ProjectShowcase";
 import ServiceComponent from "../components/ServiceComponent";
 import NewsShowcase from "../components/NewsShowcase";
+import ContactForm from "../components/ContactForm";
 const listOfServices: string[] = ["Full Project Delivery",
 "Rapid Cost Monitoring", "Construction Cost Estimating", "Advisory Services"];
 ---
@@ -50,12 +51,20 @@ incidunt ratione perferendis nisi eaque? Accusamus, dolorem.</div>
 				<a href="" class="text-sm text-white">View all stories {' ->'}</a>
 			</div>
 		</div>
+		<div id="showcase" class="col-span-8">
+			<NewsShowcase />
+		</div>
+		<div id="contact" class="col-span-8">
+			<ContactForm />
+		</div>
 </div>
 </Layout>
 
+
+
 <style>
 
-	#about, #showcase, #quote, #services, #news, #list {
+	#about, #showcase, #showcase, #quote, #services, #news, #list, #contact {
 		font-family: 'Chakra Petch', 'sans-serif';
 	}
 
