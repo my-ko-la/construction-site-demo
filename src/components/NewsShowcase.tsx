@@ -5,7 +5,7 @@ export default function NewsShowcase() {
 
     return (
         <div className="bg-[#1f1f1f] border-[#5c5757] border-b outline-1 grid md:grid-cols-8 ">
-            <div className="col-span-5 border-[#5c5757] border-r px-4">
+            <div className="col-span-5 border-[#5c5757] border-r border-b px-4">
                 <NewsComponent 
                     hero={true}
                     title={"WHAT TO LOOK FOR IN A GREAT CONTRACTOR"}
@@ -14,7 +14,7 @@ export default function NewsShowcase() {
                 />
             </div>
             <div className="flex flex-col justify-center items-center col-span-3">
-                <div className="border-[#5c5757] border-b">
+                <div className="border-[#5c5757]">
                     <NewsComponent 
                         hero={false}
                         title={"TOP RENOVATION TIPS TO REMODEL YOUR HOUSE"}
