@@ -11,10 +11,10 @@ export default function NewsComponent({hero, title, imgSrc, date}: {hero:boolean
             </div>
             {hero ? (
             <>
-                <img src={imgSrc} className="object-contain " alt="" /> 
+                <img src={imgSrc} className="object-contain px-2 " alt="" /> 
                 <div>
-                    <p className="text-white md:text-6xl text-left pt-2">{title}</p>
-                    <p className="text-[#ac9494] text-lg md:pt-4 py-2 px-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero obcaecati, repellendus quo mollitia deleniti, dolore dolores ut doloribus culpa odit velit consequatur consequuntur recusandae ex a. Non, sint provident!
+                    <p className="text-white md:text-6xl text-left pt-2 px-4">{title}</p>
+                    <p className="text-[#ac9494] text-lg md:pt-4 py-2 px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero obcaecati, repellendus quo mollitia deleniti, dolore dolores ut doloribus culpa odit velit consequatur consequuntur recusandae ex a. Non, sint provident!
                     </p>
                 </div>
             </>

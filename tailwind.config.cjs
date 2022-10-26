@@ -16,6 +16,28 @@ module.exports = {
 			addComponents({
 				'.debug': {
 					border: '1px dotted red'
+				},
+				'.toBeShown': {
+					opacity: '0',
+					filter: 'blur(5px)',
+					transition: 'all 0.3s'
+				},
+				'.Left': {
+					transform: 'translateX(-100$)'
+				},
+				'.Right': {
+					transform: 'translateX(100%)'
+				},
+				'.Up': {
+					transform: 'translateY(100%)'
+				},
+				'.Down': {
+					transform: 'translateY(-100%)'
+				},
+				'.Shown': {
+					opacity: '1',
+					filter: 'blur(0)',
+					transform: 'translateX(0) translateY(0)'
 				}
 			})
 		}

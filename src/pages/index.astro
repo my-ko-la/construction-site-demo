@@ -3,12 +3,24 @@ import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
 import Stats from "../components/Stats.astro"
 import Layout from "../layouts/Layout.astro";
+import GeneralInformation from "../components/GeneralInformation.astro"
 import ProjectShowcase from "../components/ProjectShowcase";
 import ServiceComponent from "../components/ServiceComponent";
 import NewsShowcase from "../components/NewsShowcase";
 import ContactForm from "../components/ContactForm";
 const listOfServices: string[] = ["Full Project Delivery",
 "Rapid Cost Monitoring", "Construction Cost Estimating", "Advisory Services"];
+
+//const observer = new IntersectionObserver((entries) => {
+	//entries.forEach((entry) => {
+		//if (entry.isIntersecting) {
+			//entry.target.classList.add('show')
+		//}
+	//})
+//})
+
+//const hiddenElements = document.querySelectorAll('toBeShown');
+//hiddenElements.forEach((element) => observer.observe(element));
 ---
 
 <Layout title="DENIS Construction">
@@ -28,7 +40,7 @@ sequi incidunt eveniet eius impedit sint praesentium facilis velit perspiciatis 
 commodi corporis possimus vel voluptas officiis ad quasi. Sapiente doloribus 
 incidunt ratione perferendis nisi eaque? Accusamus, dolorem.</div>
 		</div>
-		<a class="bg-[#1f1f1f] md:h-50 border-b border-[#5c5757] col-span-8 py-4 sm:py-0  md:col-span-2 flex justify-center items-center text-white" href="">Learn more about us {'->'}</a>
+		<a class="bg-[#1f1f1f] md:h-50 border-b border-[#5c5757] col-span-8 py-4 sm:py-0  md:col-span-2 flex justify-center items-center text-white" href="">Learn more about us</a>
 		<div id="showcase" class="">
 			<ProjectShowcase />
 		</div>
@@ -42,7 +54,7 @@ incidunt ratione perferendis nisi eaque? Accusamus, dolorem.</div>
 			<p class="p-6 md:px-10">DENIS Construction is uniquely equipped to manage construction projects that are complex and challenging in scope.<br> From small-scale reconstruction to greenfield infrastructure projects, we can curate the realization of the project from day 0 to completion.</p>
 		</div>
 		<div id="list" class="col-span-8">
-			{listOfServices.map(( service) => (<ServiceComponent title={service} />))}
+			{listOfServices.map((service) => (<ServiceComponent title={service} />))}
 		</div>
 		<div id="news" class="col-span-8 relative text-[#737373] flex flex-col md:flex-row items-center md:h-32 row-span-3 bg-[#1f1f1f] border-x md:border-x-0 border-b border-[#5c5757]">
 			<p class="text-3xl border-b md:border-b-0 px-5 md:border-r uppercase flex items-center justify-center w-full md:w-60 h-full border-[#5c5757]">Our Latest News</p>
@@ -57,19 +69,32 @@ incidunt ratione perferendis nisi eaque? Accusamus, dolorem.</div>
 		<div id="contact" class="col-span-8">
 			<ContactForm client:visible />
 		</div>
+		<div id="general" class="col-span-8">
+			<GeneralInformation />
+		</div>
+		<footer id="contact2" class="text-[#575c5c] whitespace-nowrap bg-[#1f1f1f] flex flex-col md:flex-row col-span-8 justify-between items-center px-12 border-t border-[#575c5c] py-2 sm:text-sm text-xs">
+			<p>&#169; ALL RIGHTS RESERVED. DENIS CONSTRUCTION 2022</p>
+			<div class="flex flex-row text-xs sm:text-sm">
+				<a class="whitespace-nowrap" href="">PRIVACY POLICY</a>
+				<p class="whitespace-pre"> | </p>
+				<a class="whitespace-nowrap" href="">TERMS OF SALE</a>
+			</div>
+		</footer>
 </div>
 </Layout>
 
 
 
 <style>
-
-	#about, #showcase, #showcase, #quote, #services, #news, #list, #contact {
+	/* yes I am aware... */
+	#about, #showcase, #showcase, #quote, #services, #news, #list, #contact, #contact2, #general {
 		font-family: 'Chakra Petch', 'sans-serif';
 	}
 
 	#about + a {
 		font-family: 'Chakra Petch', 'sans-serif';
 	}
+
+
 
 </style>
