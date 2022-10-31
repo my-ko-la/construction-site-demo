@@ -22,7 +22,7 @@ const ProjectShowcase = () => {
                </div>
            </div>
            <div className="bg-[#1f1f1f] w-full border-b border-[#5c5757] border-l md:border-l-0 md:h-full">
-            <img src="src/assets/showcase_1.jpg" className="w-full h-full p-3 pr-0" alt="Modern style town hall" />
+            <img src="../../public/showcase_1.jpg" className="w-full h-full p-3 pr-0" alt="Modern style town hall" />
            </div>
         </div>
 

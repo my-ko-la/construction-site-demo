@@ -9,7 +9,7 @@ export default function NewsShowcase() {
                     <NewsComponent 
                         hero={true}
                         title={"WHAT TO LOOK FOR IN A GREAT CONTRACTOR"}
-                        imgSrc={"src/assets/news-house-hero.jpg"}
+                        imgSrc={"../../public/news-house-hero.jpg"}
                         date={"11/02/2022"}
                     />
             </div>
@@ -18,7 +18,7 @@ export default function NewsShowcase() {
                     <NewsComponent 
                         hero={false}
                         title={"TOP RENOVATION TIPS TO REMODEL YOUR HOUSE"}
-                        imgSrc={"src/assets/news-house-1.jpg"}
+                        imgSrc={"../../public/news-house-1.jpg"}
                         date={"07/11/2021"}
                     />
                 </div>
@@ -26,7 +26,7 @@ export default function NewsShowcase() {
                     <NewsComponent 
                         hero={false}
                         title={"BUILDING YOUR HOME FROM SCRATCH"}
-                        imgSrc={"src/assets/news-house-2.jpg"}
+                        imgSrc={"../../public/news-house-2.jpg"}
                         date={"29/09/2021"}
                     />
                 </div>
