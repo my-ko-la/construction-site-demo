@@ -10,6 +10,11 @@ export default function ContactForm() {
         setShowForm(state => !state);
     }
 
+    console.log("ref", typeof ref);
+    console.log("setShowForm", typeof setShowForm);
+    console.log("showForm", typeof showForm);
+    console.log("ref.current", typeof ref.current);
+
     useLayoutEffect(() => {
         function scrollFormIntoView() {
             setTimeout(() =>{

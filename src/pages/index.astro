@@ -11,16 +11,9 @@ import ContactForm from "../components/ContactForm";
 const listOfServices: string[] = ["Full Project Delivery",
 "Rapid Cost Monitoring", "Construction Cost Estimating", "Advisory Services"];
 
-//const observer = new IntersectionObserver((entries) => {
-	//entries.forEach((entry) => {
-		//if (entry.isIntersecting) {
-			//entry.target.classList.add('show')
-		//}
-	//})
-//})
 
-//const hiddenElements = document.querySelectorAll('toBeShown');
-//hiddenElements.forEach((element) => observer.observe(element));
+
+
 ---
 
 <Layout title="DENIS Construction">
@@ -29,7 +22,7 @@ const listOfServices: string[] = ["Full Project Delivery",
 		<div class="row-start-1 row-end-3 col-span-8 md:col-span-6">
 			<Hero />
 		</div>
-		<div class="md:col-span-2 row-span-2 col-span-8">
+		<div class="md:col-span-2 notShown row-span-2 col-span-8">
 			<Stats />
 		</div>
 		<div id="about" class="flex md:h-50 border-b items-center whitespace-pre md:py-5 flex-row md:pb-10 col-span-8 md:col-span-6 border-[#5c5757] md:border-r  bg-[#1f1f1f]">
